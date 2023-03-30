@@ -5,8 +5,8 @@ const swthTokenAddress: string = '0x250b211ee44459dad5cd3bca803dd6a7ecb5d46c';
 
 const holderAddresses: Array<string> = [
   '0x123d475e13aa54a43a7421d94caa4459da021c77',
-  '0x0020c5222a24e4a96b720c06b803fb8d34adc0af',
-  '0xfe808b079187cc460f47374580f5fb47c82b87a5'
+  '0xd165142b0ee25d34c013c8bfb566b83239c9515a',
+  '0x0198bdb295555cfe320df3471ed5bf1caf5aded0'
 ];
 
 async function getSwthBalance(address: string): Promise<ethers.BigNumberish> {
@@ -17,8 +17,8 @@ async function getSwthBalance(address: string): Promise<ethers.BigNumberish> {
 }
 
 function formatBalance(balance: ethers.BigNumberish): string {
-  const balanceString = ethers.formatUnits(balance, 8);
-  const balanceInt = Number(balanceString);
+  const balanceString: string = ethers.formatUnits(balance, 8);
+  const balanceInt: Number = Number(balanceString);
   const formattedNumber = balanceInt.toLocaleString(undefined, {maximumFractionDigits: 8});
 
   return formattedNumber;
